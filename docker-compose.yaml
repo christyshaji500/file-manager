@@ -35,12 +35,12 @@ services:
       DB_PASSWORD: postgres
       DB_NAME: filemanager_dev
 
-      JWT_SECRET: christy-secret-key@2026
+      JWT_SECRET: ${JWT_SECRET}
 
-      AWS_REGION: eu-north-1
-      AWS_ACCESS_KEY_ID: AKIA4WFSVRM6JIY6LUEN
-      AWS_SECRET_ACCESS_KEY: i1AXzJ8aa2CNJf6UhHte88fq4f30tl4u4oi436f
-      AWS_BUCKET_NAME: christy-file-manager-2026
+      AWS_REGION: ${AWS_REGION}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_BUCKET_NAME: ${AWS_BUCKET_NAME}
 
   frontend:
       build: ./frontend

@@ -43,15 +43,19 @@ services:
       AWS_BUCKET_NAME: ${AWS_BUCKET_NAME}
 
   frontend:
-      build: ./frontend
+    build: ./frontend
 
-      container_name: file-manager-frontend
+    container_name: file-manager-frontend
 
-      depends_on:
-        - backend
+    depends_on:
+      - backend
 
-      ports:
-        - "3000:3000"
+    ports:
+      - "3000:3000"
+
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:5000/api
 
 volumes:
   postgres_data:
+# TEST_LINE
